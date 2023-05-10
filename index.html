@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+</head>
+<body>
+<h1>Tools</h1>
+  <ul>
+    {% for todo in todos %}
+    <li>
+        {{todo['task']}}
+    </li>
+
+  </ul>
+<form action="{{url_for('add')}}>" method="post">
+    <input type="text" name="todo">
+    <button type="submit">Add Todos </button>
+
+</form>
+
+
+</body>
+</html>
